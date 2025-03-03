@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    android:padding="16dp">
+
+    <!-- Botón "Salir" -->
+
+    <!-- Logo -->
+    <Button
+        android:id="@+id/btnLeave1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"
+        android:backgroundTint="@color/purple_500"
+        android:text="Salir"
+        android:textColor="@android:color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <!-- Título -->
+    <ImageView
+        android:id="@+id/Logo1"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="8dp"
+        android:src="@drawable/travelmatelogo"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/Title1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Formulario de Registro"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:textColor="@android:color/black"
+        app:layout_constraintTop_toBottomOf="@id/Logo1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="16dp" />
+
+    <!-- Cuadro de texto para Nombre -->
+    <EditText
+        android:id="@+id/inputName"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="Nombre de usuario"
+        android:inputType="textPersonName"
+        android:padding="12dp"
+        app:layout_constraintTop_toBottomOf="@id/Title1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="16dp" />
+
+    <!-- Cuadro de texto para Email -->
+    <EditText
+        android:id="@+id/inputEmail"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="Correo electrónico"
+        android:inputType="textEmailAddress"
+        android:padding="12dp"
+        app:layout_constraintTop_toBottomOf="@id/inputName"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="16dp" />
+
+    <!-- Cuadro de texto para Contraseña -->
+    <EditText
+        android:id="@+id/inputPassword"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="Contraseña (Por lo menos 8 caracteres)"
+        android:inputType="textPassword"
+        android:padding="12dp"
+        app:layout_constraintTop_toBottomOf="@id/inputEmail"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="16dp" />
+
+    <!-- Cuadro de texto para Fecha de nacimiento -->
+    <TextView
+        android:id="@+id/dateBirthday"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:gravity="center"
+        android:hint="Fecha de nacimiento"
+        android:padding="12dp"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/inputPassword" />
+
+    <!-- Botón "Seleccionar fecha" -->
+    <Button
+        android:id="@+id/btnDate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:backgroundTint="@color/purple_500"
+        android:text="Seleccionar fecha"
+        android:textColor="@android:color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/dateBirthday" />
+
+    <!-- Grupo de botones de selección de género -->
+    <RadioGroup
+        android:id="@+id/Gender"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/btnDate">
+
+        <RadioButton
+            android:id="@+id/Male"
+            android:layout_width="166dp"
+            android:layout_height="wrap_content"
+            android:text="Masculino"
+            android:textColor="@android:color/black" />
+
+        <RadioButton
+            android:id="@+id/Female"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Femenino"
+            android:textColor="@android:color/black" />
+    </RadioGroup>
+
+    <!-- Botón "Registrar" -->
+    <Button
+        android:id="@+id/btnSignUp"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:backgroundTint="@color/purple_500"
+        android:text="Crear cuenta"
+        android:textColor="@android:color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/Gender" />
+
+    <!-- Políticas -->
+    <TextView
+        android:id="@+id/Policy"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:gravity="center"
+        android:text="Al hacer clic en Registrar, aceptas los Términos y Condiciones de Uso, que incluyen la cláusula de arbitraje, y reconoces la Política de Privacidad"
+        android:textColor="@android:color/black"
+        android:textSize="10sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnSignUp" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

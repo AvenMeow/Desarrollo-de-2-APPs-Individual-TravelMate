@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".firstapp.travelmate_page1">
+
+    <!-- Imagen de fondo -->
+    <ImageView
+        android:id="@+id/Background"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="centerCrop"
+        android:src="@drawable/travelmatefondo" />
+
+    <!-- Superposición oscura de fondo -->
+    <View
+        android:id="@+id/Overlay"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#30000000" />
+
+    <!-- Barra superior -->
+    <View
+        android:id="@+id/UpperBar"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:background="@color/white"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <!-- Botón "Salir" -->
+    <Button
+        android:id="@+id/btnLeave"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"
+        android:backgroundTint="@color/purple_500"
+        android:text="Salir"
+        android:textColor="@android:color/white"
+        app:layout_constraintTop_toTopOf="@+id/UpperBar"
+        app:layout_constraintBottom_toBottomOf="@+id/UpperBar"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <!-- Logo -->
+    <ImageView
+        android:id="@+id/Logo"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:layout_marginTop="16dp"
+        android:src="@drawable/travelmatelogo"
+        app:layout_constraintTop_toBottomOf="@+id/UpperBar"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <!-- Titular -->
+    <TextView
+        android:id="@+id/Title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Travel Mate"
+        android:textAlignment="center"
+        android:textColor="@android:color/white"
+        android:textSize="36sp"
+        android:textStyle="italic|bold"
+        app:layout_constraintTop_toBottomOf="@+id/Logo"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="16dp" />
+
+    <!-- Lema -->
+    <TextView
+        android:id="@+id/Subtitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="La mejor compañía para tus viajes"
+        android:textColor="@android:color/white"
+        android:textSize="18sp"
+        android:textStyle="italic"
+        app:layout_constraintTop_toBottomOf="@+id/Title"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="8dp" />
+
+    <!-- Botón "Iniciar sesión" -->
+    <Button
+        android:id="@+id/btnLogIn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/purple_500"
+        android:text="Ingresar"
+        android:textColor="@android:color/white"
+        app:layout_constraintTop_toBottomOf="@+id/Subtitle"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="24dp" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
